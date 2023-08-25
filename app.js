@@ -15,7 +15,7 @@ app.get('/generate-excel', (req, res) => {
   // Función para convertir un número de serie de Excel a una fecha de JavaScript
   const excelToDate = (excelDate) => {
     const secondsInDay = 24 * 60 * 60 * 1000;
-    const excelEpoch = new Date(Date.UTC(1899, 11, 30));
+    const excelEpoch = new Date(Date.UTC(1900,0,0));
     return new Date(excelEpoch.getTime() + excelDate * secondsInDay);
   };
 
